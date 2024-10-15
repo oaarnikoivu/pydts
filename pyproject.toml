@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "pydts"
+version = "0.1.0"
+description = "Translate Pydantic models into Typescript interfaces/types"
+authors = ["Oliver Aarnikoivu <oliveraarnikoivu@icloud.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.9"
+pre-commit = "^4.0.1"
+
+[tool.ruff.lint]
+# Add the `line-too-long` rule to the enforced rule set.
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
